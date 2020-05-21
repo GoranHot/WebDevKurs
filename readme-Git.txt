@@ -4,18 +4,21 @@ Za GIT
 - Zelena boja - kad se dodaje fajl na GIT
 - Zuta boja - kad se mijenja fajl
 
-(u dati direktorij)
+(dodati u dati direktorij)
 git clone "link"
 primjer
 git clone https://github.com/GoranHot/WebDevKurs.git
 
 
-za dodavanje
+za dodavanje/selektovanje
 (specificno)
 git add .\readme2.txt
 
-(sve izmijenjene)
+(dodavanje/selektovanje svega izmijenjenog)
 git add.
 
-(commit
-git commit)
+(commit - lokalno)
+git commit -m "prvi commit"
+
+(push da ide online)
+git push
