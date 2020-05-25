@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    .mylist {
+      /* list-style-type:armenian; */
+      list-style-type:circle;
+      /* list-style-type: square; */
+    }
+
+
+    .Geks-paragraf {
+      text-align: center;
+    }
+    /* Klasa se lijepi na Img atribut */
+    .Geks {
+      height: 120px;
+      width: 120px;
+    }
+    /* A centriranje ide na parent elemenat u ovom slucaju */
+    .giigle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      color: red;
+      font-size: 1.2em;
+      font-weight: 900;
+    }
+
+    /* stilizovanje tabele */
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    td, td {
+      padding: 5px;
+      text-align: left;
+    }
+
+    .druga-tabela {
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+  <!-- sad ovaj dio paragrapha, a moze tako i za sliku, ima dodatni opis kad se hoveruje na njega, ala XKCD -->
+  <p title="tek je 1:15am">Zivio bio ovaj paragraph</p>
+
+  <!-- Div is a block level element, sa kojim lakse stilizujemo grupu sa CSS-om. -->
+
+  <div>
+    <a href="https://aka.ms/visual-studio-code">Visual Studio Code</a>
+    <br>
+    <a href="https://www.codepen.io">CodePen</a>
+ </div>
+ 
+  <!-- span grupise manjio dio teksta, isto radi lakseg stilizovanja sa CSS-om -->
+
+  <p>Here is some text. <span>This text is in a span</span> but it doesn't look any different.</p>
+
+ <ul>
+   <li>Fire</li>
+   <li>Ice</li>
+   <li>Earth</li>
+   <li>Sky</li>
+ </ul>
+
+ <ol>
+  <li>Fire</li>
+  <li>Ice</li>
+  <li>Earth</li>
+  <li>Sky</li>
+</ol>
+
+<ul class="mylist">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<!-- H1 - H6 je block  element (iline elementat zauzima cio red, visina elementa zavisi od defaultnih parametara, tipa u ovom slucaju font-size, dev lab kurs ima pogresan info) -->
+<!-- block elementi zauzimaju koliko im treba -->
+<h2>Predmeti</h2>
+  <ul>
+    <li>Matematika</li>
+    <li>Programiranje</li>
+    <li>Likovno</li>
+  </ul>
+
+
+
+  <!-- Ordered liste mogu imat' definisan tip, po kojem ce se sortirat', numerijski, alfabetno, rimskim slovima etc. Default je 1.
+  Type "1"	This is the default type. In this type, the list items are numbered with numbers.
+  Type "I"	In this type, the list items are numbered with upper case roman numbers.
+  Type "i"	In this type, the list items are numbered with lower case roman numbers.
+  Type "A"	In this type, the list items are numbered with upper case letters.
+  Type "a"	In this type, the list items are numbered with lower case letters.
+  -->
+  <div>
+    <H1>Popularnost programskih jezika:</H1>
+    <ol type="I">
+      <li>JS</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>C++</li>
+    </ol>
+  </div>
+  <!-- za numeriske liste, mogu je definisati start -->
+  <ol start="25">
+    <li>Zeka</li>
+    <li>Peka</li>
+    <li>Mara</li>
+  </ol>
+
+  <!-- takodje mozemo ic i unazad ak' je potrebno -->
+  <ol reversed>
+    <li>Zeka</li>
+    <li>Keka</li>
+    <li>Seka</li>
+  </ol>
+
+  <!-- On Images W3Schools -->
+  <p>For More info on Images Visit <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">W3Schools</a></p>
+  <br>
+  <!-- za inicijalan link slike, pozeljno je stavit ./ pa onda pratit' link sa smislenom putanjom, da se ne bi uzimala kompletna/apsolutna putanja 
+  stoga se koristi relativna putanja u odnosu na fajl sa kojim se radi, u ovom slucaju index2.html-->
+  <img src="./img/workplace.jpg" alt="Workplace" usemap="#workmap">
+  <!-- Primjer kako se koristi MAP tag u HTML-u, i svi elementi imaju svoj link, moze bit' kul -->
+  <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+  </map>
+
+  <h2>O slikama</h2>
+  <p>Slike su generalno jedan od najvecih problema pri optimizaciji sajta, zbog svoje velicine, i prikaza... nema potrebe prikazivati 4k sliku na malom ekranu telefona
+    totalni je overkill. <br> Stoga je pozeljno preko media query-s pravit' posebne varijacije slika koje ce se loadovati u zavisnosti od toga sa kojeg 
+    uredjaja ih pristupamo, sajtu tj.
+  </p>
+
+  <br>
+  <p class="Geks-paragraf">Klikni sliku ispod da bi posao na Google</p>
+  <a class="giigle" href="http://www.google.com" target="_blank" class="Google-Slika"> <img class="Geks" src="./img/google.png" alt="Google"> </a>
+
+  <br>
+
+  <p>Imamo apsolutno putanju i relativnu putanje</p>
+  <ul>
+    <li>Apsolutna putanja predstavlja punu putanju do fajla</li>
+    <li>Relativna putanja referencira ka fajlu koji je relativan u odnosu na trenutni fajl</li>
+  </ul>
+
+  <p>Bitno napomenuti</p>
+
+  <pre> &lt;img src="./images/picture.jpg" alt="Mountain"&gt; </pre>
+  <pre> &lt;img src="../images/picture.jpg" alt="Mountain"&gt; </pre>
+
+  <p>Na gornjoj sintaksi prvi link se odnosi na sliku koje se nalazi u folder images u pocetnom folderu html fajla sa kojim radimo <br></p>
+  U donjem tekstu link se odnosi na sliku koja se nalazi u folderu images koji je jedan korak unazad u putanji, broj tackica je broj koraka unazad, jedna tackica je default
+
+  <h2>Table Element</h2>
+
+  <p>Tables - matrices <br>
+  Headere tabela oznacavamo sa <span> &lt;th&gt; </span> <br>
+  redove sa <span> &lt;tr&gt; </span>, koji se odnosi na table rows, <br>
+  dok polja tabele ispunjavamo sa <span> &lt;td&gt; </span>
+  <br>
+  Vazno znati da <span> &lt;td&gt; </span> elementi mogu da sadrze <span> bilo koji drugi HTML element </span>
+  <br>
+  Naslov tabela oznacavamo sa <span> &lt;caption&gt; </span> tagom,
+  <br>
+  <span> &lt;colspan&gt; </span> u odnosu na <span> &lt;td&gt; </span> se odnosi na broj kolona koje cemo zauzet sa td elementom
+  <br>
+  <span> &lt;rowspan&gt; </span> u odnosu na <span> &lt;td&gt; </span> se odnosi na broj redova koje cemo zauzet sa td elementom
+
+  <p>Stilove tabele moguće je mijenjati CSS-om: <br>
+    <ul>
+      <li>Razmak između redova/kolona</li>
+      <li>Razmak između polja</li>
+      <li>Boje redova, polja</li>
+      <li>Veličinu tabele, vrste, kolone</li>
+      <li>etc.</li>
+
+    </ul>
+  </p>
+  
+  <p>Vise o tabelama na <a href="https://www.w3schools.com/html/html_tables.asp">ovom linku</a></p>
+  </p>
+
+  <p>Colspan primjer</p>
+
+  <table>
+    <tr>
+      <th>Ime</th>
+      <th colspan="2">Telefon</th>
+    </tr>
+    <tr>
+      <td>Goran</td>
+      <td>+38269588184</td>
+      <td>030-341-964</td>
+    </tr>
+  </table>
+
+  <p>Rowspan Primjer</p>
+  <table class="druga-tabela">
+    <tr>
+      <th>Ime</th>
+      <td colspan="2">Goran</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Telefon</th>
+      <td>+38269588184</td>
+    </tr>
+    <tr>
+      <td>030-341-964</td>
+    </tr>
+  </table>
+
+</body>
+</html>
