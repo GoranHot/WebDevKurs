@@ -14,8 +14,8 @@ za dodavanje/selektovanje
 (specificno)
 git add .\readme2.txt
 
-(dodavanje/selektovanje svega izmijenjenog)
-git add.
+(dodavanje/selektovanje svega izmijenjenog, ## space izmedju add i tacke ##)
+git add .
 
 (commit - lokalno)
 git commit -m "prvi commit"
