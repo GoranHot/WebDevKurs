@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <iframe name="iframe1"></iframe>
+<p><a href="https://kolektiv.me/" target="iframe1">Kolektiv</a></p>
+
+<br>
+
+
+  <!-- Type can be text, email, password etc. -->
+  <input type="text"> <br>
+  <!-- textarea - cols rows aren't neccesary, and can set a char limit -->
+  <!-- text area is usually for comments/longer texts -->
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <br>
+  <select name="" id="">
+    <option value="">Opcija 1</option>
+    <option value="">Opcija 2</option>
+    <option value="">Opcija 3</option>
+  </select>
+
+  <!-- checkbox/radio su tipovi input elemenata -->
+
+  <p>Najbitniji element forme je input polje, sadrzi vrijednost koju unosi korisnik, a koja se dalje prosledjuje ak' je validna</p>
+  <br>
+  <p>Svi podaci iz input polja se prikupljaju i obicno salju serveru za dalju obradu.</p>
+  <br>
+
+  <input type="text">
+  <input type="radio" value="">
+  <br>
+  <!-- Checkbox -->
+  <label for="cookie">Snickers</label>
+  <input type="checkbox" id="cookie" name="cookie" value="Snickers">
+  <br><br>
+
+  <h2>Primjer Forme</h2>
+
+  <form>
+    <label for="fname">Ime:</label>
+    <input type="text" name="fname" value="Goran"> <br>
+    <label for="lname">Prezime:</label>
+    <input type="text" name="lname" value="Hot"> <br>
+    <label for="games">Izaberi Igru</label>
+    <select name="games" id="games">
+      <option value="games">The Elder Scrolls V: Skyrim</option>
+      <option value="games">The Outer Wilds</option>
+      <option value="games">Persona 5</option>
+      <option value="games">Star Wars: Knights of the Old Republic</option>
+      <option value="games">Devil May Cry 3</option>
+      <option value="games">Planescape: Torment</option>
+    </select>
+    <br>
+    <label for="">Besplatna Dostava</label>
+    <input type="checkbox"> <br>
+    <label for="">Placanje po pouzecu</label>
+    <input type="checkbox"> <br>
+    <label for="pcs">Komada:</label>
+    <input type="number" min="1" max="10" step="1"> <br>
+    <label for="range">Koliko ste zadovoljni izborom igara?</label>
+<!-- Value oznacava default vrijednost, step u kojim stepovima ide -->
+    <input type="range" min="0" max="100" step="10" value="50"> <br>
+    <text>Da li zelite igricu u kutiji, il' digital download?</text> <br>
+    <label for="box-dd">Game Case</label>
+    <input type="radio" name="box-dd" value="box">
+    <label for="box-dd">Digital Download</label>
+    <input type="radio" name="box-dd" value="dd"> <br>
+    <input type="submit" value="Naruci">
+  </form>
+  <br><br>
+
+  <h2>Select</h2>
+  <select name="cars" id="">
+    <!-- selected oznacava defaultnu vrijednost, ak' zelite -->
+    <option selected value="bmw">BMW</option>
+    <option value="audi">Audi</option>
+    <!-- disabled oznacava element koji se ne moze selektovat'
+    npr ak' je item out of stock -->
+    <option value="fiat" disabled>Fiat</option>
+    <option value="mercedes">Mercedes</option>
+  </select>
+
+  <p>Attribute value is used to define a value which is being sent to the server.</p>
+  
+  <h2>Input - Button i sam Button Tag Element</h2>
+  <input type="button" value="Click Me">
+     
+ <button type=”button”> Click me </button>
+ <!-- Glavna razlika je sto na button type mozemo stavit' bilo
+sta unutar button tag-a, npr stilizovanu sliku, dok na input button
+ne mozemo jer je self-closing tag -->
+<br>
+<p><i>Ak' zelimo select opciju sa placeholderom, ovako to mozemo napravit' uz pomoc atributa
+  selected/disabled/hidden
+</i></p>
+<h2>Select box with a placeholder</h2>
+<select name="drinks" required>
+  <option value="" disabled selected hidden>Choose a drink</option>
+  <option value="coffee">Coffee</option>
+  <option value="tea">Tea</option>
+  <option value="milk">Milk</option>
+</select>
+
+</body>
+</html>

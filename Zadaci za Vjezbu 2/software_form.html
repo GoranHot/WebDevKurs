@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Software Order Form</h1>
+
+  <fieldset>
+    <legend>Licence Details</legend>
+    <ul>
+      <li>
+        <label for="email">Email Adress</label>
+        <input type="email" placeholder="">
+      </li>
+      <li>
+        <label for="website">Website</label>
+        <input type="text" placeholder="http://www.example.com"></li>
+      <li>
+        <label for="licence">Number of licences</label>
+        <input type="text" placeholder="How many to buy (1-10)">
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Billing Adress</legend>
+    <ul>
+      <li>
+        <label for="">Name</label>
+        <input type="text" placeholder="First Last">
+      </li>
+      <li>
+        <label for="">Adress</label>
+        <textarea placeholder="House Number, street, city, state"></textarea>
+      </li>
+      <li>
+        <label for="">Postal Code</label>
+        <input type="text" placeholder="Post code or zip code">
+      </li>
+      <li>
+        <label for="">Country
+          <select name="" id="">
+            <option value="">Germany</option>
+            <option value="">Japan</option>
+            <option value="">USA</option>
+            <option value="">Norway</option>
+            <option value="">New Zeland</option>
+          </select>
+        </label>
+      </li>
+      <li>
+        <label for="">Phone <i>(optional)</i></label>
+        <input type="text" placeholder="Include country prefix, e.g.">
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Payment Details</legend>
+    <ul>
+      <li>
+        <label for="">Card Number</label>
+        <input type="text" placeholder="As shown on the front of your card">
+      </li>
+      <li>
+        <label for="">CVV Code</label>
+        <input type="text" placeholder="As shown on the back of your card">
+      </li>
+      <li>
+        <label for="">Expiry Date</label>
+        <input type="text" placeholder="YYYY-MM">
+      </li>
+    </ul>
+  </fieldset>
+  <button type="Submit">Place Your Order</button>
+</body>
+</html>
